@@ -15,13 +15,15 @@ end
 
 get '/messages/:id' do
   @message = Message.find params[:id]
+  @all_messages = Message.where("author = '#{@message.author}' AND id != #{@message.id}")
   erb :'messages/show'
 end
 
 post '/messages' do
   @message = Message.new(
     content: params[:content],
-    author:  params[:author]
+    author:  params[:author],
+    url: params[:url]   
   )
   if @message.save
     redirect '/messages'

@@ -11,11 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718172810) do
+ActiveRecord::Schema.define(version: 20150718234423) do
 
   create_table "messages", force: :cascade do |t|
-    t.string "author"
-    t.string "content"
+    t.string   "author"
+    t.string   "content"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

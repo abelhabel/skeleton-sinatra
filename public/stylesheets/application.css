@@ -1,0 +1,23 @@
+.message{
+  background-color: lightblue;
+  max-width: 240px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.message a:link{
+  color: gray;
+  font-size: 80%;
+}
+
+.time{
+  color: white;
+  font-size: 70%;
+  text-transform: uppercase;
+}
+
+.message_content{
+  background-color: #EDF1FA;
+  border: 1px solid black;
+  border-radius: 4px;
+}
